@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ counter }}</p>
+    <p>{{ counter > 10 ? 'greater than ten' : 'Less than ten' }}</p>
+    <button v-on:click = " add ">ADD 1</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+        },
+        methods:{
+            add(){
+                this.counter++
+            }
+        }
+    })
+</script>

@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <p>{{ counter }}</p>
+    <button @click="add">Adding</button>
+    <hr>
+    <input type="text" :value="counter">
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            counter: 0
+        },
+        methods:{
+            add(){
+                this.counter++
+            }
+        }
+    })
+</script>

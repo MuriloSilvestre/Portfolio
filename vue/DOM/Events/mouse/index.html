@@ -1,0 +1,43 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ counter }}</p>
+    <button v-on:click = " add ">ADD 1</button>
+    <p v-on:mousemove = " showXY " >
+        Mouse: {{ x }} e {{ y }}
+        <span v-on:mousemove = " Stop " >
+            Stop!!!!!
+        </span>
+    </p>
+    <p>{{ counter2 }}</p>
+    <button v-on:click = " add2(5) ">ADD 1</button>
+    <a v-on:click.prevent="" href="http://google.com">Google</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            counter2: 0,
+            x: 0,
+            y: 0,
+        },
+        methods:{
+            add(){
+                this.counter++
+            },
+            showXY(event){
+                console.log(event)
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            add2(adc){
+                this.counter2+=adc
+            },
+            Stop(event){
+                event.stopPropagation()
+            }
+        }
+    })
+</script>

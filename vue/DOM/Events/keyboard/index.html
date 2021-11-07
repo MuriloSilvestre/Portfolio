@@ -11,6 +11,8 @@
     </p>
     <p>{{ counter2 }}</p>
     <button v-on:click = " add2(5) ">ADD 1</button>
+    <a v-on:click.prevent="" href="http://google.com">Google</a>
+    <input type="text" v-on:keyup.enter=" showAlert ">
 </div>
 
 <script>
@@ -36,6 +38,9 @@
             },
             Stop(event){
                 event.stopPropagation()
+            },
+            showAlert(){
+                alert("This is a alert")
             }
         }
     })
