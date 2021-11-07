@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue"></script>
+    <div id="app">
+        <ul>
+            <li v-for = " ( color, i ) in colors " :key="color">{{ i + 1 }} {{ color }}</li>
+        </ul>
+        <button @click="colors.push('gray')">Add</button>
+        <template v-for = " ( color, i ) in colors ">
+            <h1>{{ i + 1 }} {{ color }}</h1>
+        </template>
+        <hr>
+        <ul>
+            <li v-for = " person in persons " :key="person.id">
+                <span v-for="( valor , key , id ) in person">
+                    {{ key }}: {{ valor }}
+                </span>
+            </li>
+        </ul>
+        <span v-for="n in 10">{{ n }} </span>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data:{
+                colors: [ 'Red' , 'Blue' , 'Green' , 'Black' , 'White' ],
+                persons:[
+                   { id: 1 , name:'Murilo' , age:26 , weight: 89},
+                   { id: 2 , name:'Marcos' , age:23 , weight: 68},
+                   { id: 3 , name:'Rafaela' , age:31 , weight: 75},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
