@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+    {{ name }} {{ surname }} {{ 10 + 16 }}
+</div>
+<script>
+    function myVue(params){
+        this.$el = document.querySelector(params.el)
+        this.$data = params.data
+
+        for(let atr in this.$data){
+           Object.defineProperty(this, atr, {
+               get: () =>{
+                   return this.$data[atr]
+               },
+               set: value =>{
+                   this.$data[atr] = value
+               }
+           }) 
+        }
+        const regex = /\{\{([\s\w+*-/]*)\}\}/g
+        this.$el.innerHTML = this.$el.innerHTML.replace(regex, (mach, $1)=>{
+            const value = this[$1.trim()]
+            return value ? value : eval($1)
+        })
+    }
+    
+    const vm = new myVue({
+        el: '#app',
+        data:{
+            name: 'Murilo',
+            surname: 'Silvestre'
+        }
+    })
+
+    console.log(vm.name)
+</script>
