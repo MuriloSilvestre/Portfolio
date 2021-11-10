@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+    <aulas></aulas>
+    <aulas></aulas>
+    <aulas></aulas>
+    <aulas></aulas>
+</div>
+<script>
+    Vue.component('aulas',{
+        template: `
+        <div>
+            <h1>{{ aula }}</h1>
+            <h2>{{ modulo }}</h2>
+            <button @click="altetarAula">Altetar Aula</button>
+            <button @click="altetarModulo">Altetar Modulo</button>
+        </div>
+        `,
+        data: () => {
+            return{
+                aula:'Aula: Montando instancia Vue',
+                modulo:' Modulo: Instacia Vue'
+    }
+        },
+        methods:{
+            altetarAula(){
+                this.aula += '#'
+            },
+            altetarModulo(){
+                this.modulo += '#'
+            }
+        }
+    })
+
+    const vm = new Vue({
+        el:'#app'
+    })
+    
+</script>
