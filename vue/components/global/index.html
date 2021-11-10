@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+    <counter></counter>
+    <counter></counter>
+    <counter></counter>
+</div>
+<script>
+    Vue.component('counter',{
+        template:`
+        <div>
+            <samp>{{ counter }}</samp>
+            <button @click="counter++">+</button>
+            <button @click="counter--">-</button>
+        </div>
+        `,
+        data: () =>{
+            return{
+                counter: 0,
+            }
+        },
+    })
+
+    new Vue({
+        el:'#app',
+    })
+    
+</script>
