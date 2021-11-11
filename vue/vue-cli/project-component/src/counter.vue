@@ -28,20 +28,25 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .counter{
         display:flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
-    .counter span{
+    span{
+        width: 50px;
+        border-bottom: 1px solid green;
         font-weight: bold;
         font-size: 2rem;
         color: green;
+        margin: 10px;
     }
     
-    .counter button{
+    button{
+        width:50px;
+        height: 50px;
+        border: 1px solid transparent;
+        border-radius: 50%;
         background-color: green;
         border-color: green;
         color: white;
