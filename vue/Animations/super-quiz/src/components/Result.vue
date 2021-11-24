@@ -1,12 +1,20 @@
 <template>
-    <div class="result">
-        
+    <div class="result" :class="{wrong: !result}">
+        <span v-if="result">Respossta Certa!</span>
+        <span v-else>Respossta Errada!</span>
+        <hr>
+        <button @click="$emit('confirmed')">Proxima Pergunta</button>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props:{
+        result:{
+            type:Boolean,
+            required: true
+        }
+    }
 }
 </script>
 
