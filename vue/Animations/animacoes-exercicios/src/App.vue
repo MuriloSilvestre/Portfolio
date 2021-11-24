@@ -40,29 +40,62 @@
 
 			</div>
 		</transition>
+
+		<hr>
+		<div class="mb-4">
+			<b-button variant="primary"  class="ml-4" @click="componentSelected = 'AlertInfo'">	
+				Info
+			</b-button>
+			<b-button variant="secondary" class="ml-4" @click="componentSelected = 'AlertAdvertance'">	
+				Advertance
+			</b-button>
+		</div>
+		<transition name="fade" mode="out-in">
+			<component :is="componentSelected"></component>
+		</transition>
+		<hr>
+		<div class="mb-4">
+			<b-button variant="primary"  class="ml-4" @click="adicionarAluno">	
+				Adicionar Aluno
+			</b-button>
+		</div>
+		<transition-group name="slide">
+			<b-list-group v-for="(aluno,i) in alunos" :key="aluno">
+				<b-list-itens @click="removerAluno(i)">{{aluno}}</b-list-itens>
+			</b-list-group>
+		</transition-group>
 	</div>
 </template>
 
 <script>
+import AlertAdvertance from './AlertAdvertance.vue'
+import AlertInfo from './AlertInfo.vue'
 
 export default {
+	components: { AlertInfo , AlertAdvertance },
 	data:() => {
 		return{
+			alunos:['Murilo','Augusto','Ana','Paula'],
 			msg: 'Uma mensagem de informação para o usuário!',
 			exibir: false,
 			exibirJs: true,
 			animationType: 'fade',
-			baseWidth: 0
+			baseWidth: 0,
+			componentSelected: 'AlertInfo',
 		}
 	},
 	methods:{
-		beforeEnter(el){
-			console.log('beforeEnter')
+		adicionarAluno(){
+			const s = Math.random().toString(36).substring(2)
+			this.alunos.push(s)
 		},
-		enter(el, done){
+		removerAluno(indice){
+			this.alunos.splice(indice,1)
+		},
+		animat(el, done, negative){
 			let rodada = 1
 			const temporizador = setInterval(()=>{
-				const novaLargura = this.baseWidth + rodada*10
+				const novaLargura = this.baseWidth + (negative ? -rodada * 10 : rodada * 10)
 				el.style.width = `${novaLargura}px`
 				rodada ++
 				if(rodada > 30){
@@ -71,25 +104,26 @@ export default {
 				}
 			}, 8)
 		},
-		afterEnter(el){
-			console.log('afterEnter')
+		beforeEnter(el){
+			this.baseWidth = 0
+			el.style.width = `${this.baseWidth}px`
 		},
-		enterCancelled(){
-			console.log('enterCancelled')
+		enter(el, done){
+			this.animat(el, done, false)
 		},
+		// afterEnter(el){
+		// 	console.log('afterEnter')
+		// },
+		// enterCancelled(){
+		// 	console.log('enterCancelled')
+		// },
 		beforeLeave(el){
-			console.log('beforeLeave')
+			this.baseWidth = 300
+			el.style.width = `${this.baseWidth}px`
 		},
 		leave(el, done){
-			console.log('leave')
-			done()
-		},
-		afterLeave(el){
-			console.log('afterLeave')
-		},
-		leaveCancelled(){
-			console.log('leaveCancelled')
-		},
+			this.animat(el, done, true)
+		}
 	}
 }
 </script>
@@ -135,6 +169,8 @@ export default {
 }
 
 .slide-leave-active{
+	position: absolute;
+	width: 100%;
 	animation: slide-out 2s ease;
 	transition: opacity 2s;	
 }
@@ -143,7 +179,9 @@ export default {
 	opacity: 0;
 }
 
-
+.slide-move{
+	transition: transform 1s;
+}
 
 
 </style>
