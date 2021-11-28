@@ -1,6 +1,7 @@
 <template>
 	<div id="app" class="container">
 		<h1>HTTP com Axios</h1>
+		<b-alert show dismissible v-for="mensagem in mensagens" :key="mensagem.texto">{{ mensagem.texto }}</b-alert>
 		<b-card>
 			<b-form-group label="Name:">
 				<b-form-input type="text" size="lg"
@@ -27,6 +28,10 @@
 				<strong> Idade: </strong> {{usuario.age}}<br>
 				<strong> E-mail: </strong> {{usuario.email}}<br>
 				<strong> Id: </strong> {{ id }}<br>
+				<b-button @click="carregar(id)"
+					size="lg" variant="warning">Carregar</b-button>
+				<b-button @click="excluir(id)"
+					size="lg" class="ml-2" variant="danger">Excluir</b-button>
 			</b-list-group-item>
 		</b-list-group>
 	</div>
@@ -36,7 +41,9 @@
 export default {
 	data:()=>{
 		return{
-			usuarios:[],
+			mensagens: [],
+			usuarios: [],
+			id: null,
 			usuario:{
 				name:'',
 				age:0,
@@ -45,19 +52,50 @@ export default {
 		}
 	},
 	methods:{
+		limpar(){
+			this.usuario.name = ''
+			this.usuario.age = 0
+			this.usuario.email =''
+			this.id = null
+			this.mensagens = []
+		},
+
+		carregar(id){
+			this.id = id
+			this.usuario = { ...this.usuarios[id] }
+		},
+
 		salvar(){
-			this.$http.post('usuarios.json', this.usuario)
-				.then(res =>{
-					this.usuario.name = ''
-					this.usuario.age = 0
-					this.usuario.email =''
+			const metodo = this.id ? 'patch' : 'post'
+			const finalURL = this.id ? `/${this.id}.json` : '.json'
+			this.$http[metodo](`/usuarios${finalURL}`, this.usuario)
+				.then(() => {
+					this.limpar()
+					this.mensagens.push({
+						texto: 'Operação realizado com sucesso!',
+						tipo: 'success'
+					})
 				})
 		},
+
 		obterUsuarios(){
 			this.$http.get('usuarios.json').then(res=>{
 				this.usuarios = res.data
 			})
-		}
+		},
+
+		excluir(id){
+			this.$http.delete(`/usuarios/${id}.json`).then(() => {
+				this.limpar()
+				this.obterUsuarios()
+			})
+			.catch(()=>{
+				this.mensagens.push({
+					texto: 'Problema para excluir!',
+					tipo: 'danger'
+				})
+			})
+		},
 	}
 }
 </script>
