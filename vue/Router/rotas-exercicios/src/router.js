@@ -6,12 +6,15 @@ import Usuario from './components/usuario/Usuario'
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
+    mode:'history',
+    routes: [
+    {
         path:'/',
         component: Inicio,
     },{
-        path:'/usuario',
+        path:'/usuarios/:id',
         component: Usuario,
-        }
+        props: true
+    }
     ]
 })
