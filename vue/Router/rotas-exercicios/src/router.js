@@ -31,7 +31,8 @@ export default new Router({
             {
                 path: ':id/editar',
                 component: UsuarioEditar,
-                props: true
+                props: true,
+                name: 'editarUsuarios',
             },
         ]
     }
