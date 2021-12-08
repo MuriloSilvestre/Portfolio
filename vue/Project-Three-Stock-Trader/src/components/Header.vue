@@ -1,9 +1,9 @@
 <template>
 	<v-toolbar app>
-		<v-toobar-title class="headline text-uppercase mr-4">
+		<v-toolbar-title class="headline text-uppercase mr-4">
 			<span>STock</span>
 			<span class="font-weight-light">Trader</span>
-		</v-toobar-title>
+		</v-toolbar-title>
 		<v-toolbar-items>
 			<v-btn flat to="/">Início</v-btn>
 			<v-btn flat to="/portfolio">Portfólio</v-btn>

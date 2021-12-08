@@ -15,13 +15,13 @@ export default{
             state.stocks = stocks
         }
     },
-    action:{
+    actions:{
         buyStock({ commit }, order){
-            commit()
+            commit(order)
         },
-        initStocks({ commit }){
-            commit('setStock', stocks)
-        }
+        initStocks({ commit }) {
+            commit('setStocks', stocks)
+        },
     },
     getters:{
         stocks(state){
