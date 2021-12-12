@@ -1,49 +1,53 @@
-export default{
-    state:{
+export default {
+    state: {
         funds: 10000,
-        stocks:[]
+        stocks: []
     },
-    mutations:{
-        buyStock(state, { stockId, quantity, stockPrice } ){
-            const records = state.stocks.find(element => element.id == stockId)
-            if (records){
-                records.quantity += quantity 
+    mutations: {
+        buyStock(state, { stockId, quantity, stockPrice }) {
+            const record = state.stocks.find(element => element.id == stockId)
+            if (record) {
+                record.quantity += quantity
             } else {
                 state.stocks.push({
-                    id:stockId,
+                    id: stockId,
                     quantity: quantity
                 })
             }
             state.funds -= stockPrice * quantity
         },
-        sellStock(state, { stockId, quantity, stockPrice }){
-            const records = state.stocks.find(element => element.id == stockId)
-            if ( records.quantity > quantity ){
-                records.quantity -= quantity
-            }else{
-                state.stocks.splice(state.stocks.indexOf(records), 1)
+        sellStock(state, { stockId, quantity, stockPrice }) {
+            const record = state.stocks.find(element => element.id == stockId)
+            if (record.quantity > quantity) {
+                record.quantity -= quantity
+            } else {
+                state.stocks.splice(state.stocks.indexOf(record), 1)
             }
             state.funds += stockPrice * quantity
+        },
+        setPortfolio(state, portfolio) {
+            state.funds = portfolio.funds
+            state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : []
         }
     },
-    actions:{
-        sellStock({ commit }, order){
+    actions: {
+        sellStock({ commit }, order) {
             commit('sellStock', order)
         }
     },
-    getters:{
-        stockProtfolio(state, getters){
-            return state.stocks.map(stock=>{
-                const records = getters.stocks.find(element => element.id == stock.id)
-                return{
+    getters: {
+        stockPortfolio(state, getters) {
+            return state.stocks.map(stock => {
+                const record = getters.stocks.find(element => element.id == stock.id)
+                return {
                     id: stock.id,
-                    name: records.name,
                     quantity: stock.quantity,
-                    price: records.price
+                    name: record.name,
+                    price: record.price
                 }
             })
         },
-        funds(state){
+        funds(state) {
             return state.funds
         }
     }

@@ -1,19 +1,10 @@
-import Vue from "vue"
-import axios from "axios"
+import Vue from 'vue'
+import axios from 'axios'
 
 Vue.use({
-    install(Vue){
+    install(Vue) {
         Vue.prototype.$http = axios.create({
-            baseURL: "https://stocktrader-32a5e-default-rtdb.firebaseio.com/",
-            headers: {
-                "Auth": '123456'
-            }
+            baseURL: 'https://stocktrader-32a5e-default-rtdb.firebaseio.com/'
         })
-
-        Vue.prototype.$http.interceptors.request.use( config => {
-            console.log(config.method)
-            return config
-        }, error =>Promise.reject(error))
-
     }
 })
