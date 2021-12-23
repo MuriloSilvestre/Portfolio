@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MTS9Oid2XhS7s2sUrhXgyKQHx2NN0DlobqoVZyyUsZX0N/QvzyF3d/7Xfv0rm4N70wRNIdO4VzJIvLvDrS+Mug==",
+  "dgSpecHash": "zCeZMU1o7lgJvneOHr2/7rrN3DxplXOZziK+rKkeZ2F99Io1ke6/H6YF4Y09y1l4slecKz9CI2riF/HCqxXF9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\merca\\curso_api_netcore\\src\\Api.Domain\\Domain.csproj",
+  "projectFilePath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
