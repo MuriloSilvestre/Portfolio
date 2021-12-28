@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zCeZMU1o7lgJvneOHr2/7rrN3DxplXOZziK+rKkeZ2F99Io1ke6/H6YF4Y09y1l4slecKz9CI2riF/HCqxXF9A==",
+  "dgSpecHash": "GVuDt0NmqF/pJGBcK14H4zJ7PZf6f2kZd/GUkjmkvcU+YKJPzvJ10sCd3vArPgSx0k9zDu9OniIuStpYgkfnBw==",
   "success": true,
-  "projectFilePath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

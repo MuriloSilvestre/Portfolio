@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {}
+    "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {
+    "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\mxshx\\.nuget\\packages\\",
-        "outputPath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\obj\\",
+        "projectPath": "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+        "outputPath": "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\mxshx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

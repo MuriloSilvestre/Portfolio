@@ -5146,25 +5146,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mxshx\\.nuget\\packages\\": {},
+    "C:\\Users\\merca\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\portfolio\\Portfolio\\api_netcore\\src\\api.data\\Data.csproj",
+      "projectUniqueName": "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\api.data\\Data.csproj",
-      "packagesPath": "C:\\Users\\mxshx\\.nuget\\packages\\",
-      "outputPath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\api.data\\obj\\",
+      "projectPath": "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj",
+      "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+      "outputPath": "D:\\Portfolio\\api_netcore\\src\\Api.data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\mxshx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -5180,8 +5180,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {
-              "projectPath": "C:\\portfolio\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj"
+            "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj": {
+              "projectPath": "D:\\Portfolio\\api_netcore\\src\\Api.Domain\\Domain.csproj"
             }
           }
         }
