@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rLunJh3aiLjB0P08fobo8LGKf7C468CNlckLT/9R+PKcdO2cZ2TDyB652mok3QKLFTqXt0ZcbuBrG3XU6pOCkQ==",
+  "dgSpecHash": "jkHe6OTHdZ7D0db9N4CP1SixetfdHdeDoMooOZt6OARVbSL93hUgdzeGMzHSYfVLet0+B/DXbGtb4tOXaHBuSw==",
   "success": true,
-  "projectFilePath": "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj",
+  "projectFilePath": "D:\\Portfolio\\api_netcore\\src\\Api.Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\merca\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\merca\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

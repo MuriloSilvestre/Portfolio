@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RiS/IpMeQ/1mn/b1PrsOmj9ofDAQZTK1BGdMO5nYXRdlnSZP6LkcKHtbV+TEL4fqzgwirW17BheePoq6vLm78g==",
+  "dgSpecHash": "eDLPoX2NOElLqJ8hiX6w8/PhvRFAqDiQLArvbdE74+SdwJe1SN9UpONVfB0AY+2IMDIBBMEVDDTfVc99T3cNwg==",
   "success": true,
-  "projectFilePath": "C:\\curso_api_netcore\\src\\Api.Application\\application.csproj",
+  "projectFilePath": "D:\\Portfolio\\api_netcore\\src\\Api.Application\\application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

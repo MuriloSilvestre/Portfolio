@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj": {}
+    "D:\\Portfolio\\api_netcore\\src\\Api.Data\\Data.csproj": {}
   },
   "projects": {
-    "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj": {
+    "D:\\Portfolio\\api_netcore\\src\\Api.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj",
+        "projectUniqueName": "D:\\Portfolio\\api_netcore\\src\\Api.Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\Portfolio\\api_netcore\\src\\Api.data\\Data.csproj",
+        "projectPath": "D:\\Portfolio\\api_netcore\\src\\Api.Data\\Data.csproj",
         "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
-        "outputPath": "D:\\Portfolio\\api_netcore\\src\\Api.data\\obj\\",
+        "outputPath": "D:\\Portfolio\\api_netcore\\src\\Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
