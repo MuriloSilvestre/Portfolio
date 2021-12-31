@@ -1,0 +1,17 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "SyotosKORN13",
+    "database": "ControleParceiros",
+    "logging": true,
+    "synchronize": true,
+    "entities":["./src/modules/**/typeorm/entidades/*.ts"],
+    "migration": [
+      "./src/shared/typeorm/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "./src/shared/typeorm/migrations"
+    }
+}
