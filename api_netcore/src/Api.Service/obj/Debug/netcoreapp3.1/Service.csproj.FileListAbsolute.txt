@@ -15,3 +15,10 @@ D:\Portfolio\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.Assembl
 D:\Portfolio\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
 D:\Portfolio\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
 D:\Portfolio\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.dll
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Data.dll
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Data.pdb
+D:\Portfolio\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.pdb
+D:\Portfolio\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
