@@ -8,7 +8,7 @@ import {
   Timestamp,
   UpdateDateColumn
  } from "typeorm";
- import Partner from "@modules/partner/typeorm/entities/Partner";
+ import Person from "@modules/person/typeorm/entities/Person";
 
 
 @Entity('user')
@@ -35,11 +35,11 @@ class User{
   public UpdateAT: Timestamp
 
   @Column('integer')
-  public PartnerId: number
+  public PersonId: number
 
-  @OneToOne(() => Partner, Partner => Partner.Id)
+  @OneToOne(() => Person, Person => Person.Id)
   @JoinColumn()
-  Partner: Partner;
+  Person: Person;
 }
 
 export default User

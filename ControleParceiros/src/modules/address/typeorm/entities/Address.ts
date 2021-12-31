@@ -1,10 +1,13 @@
 import {
   Column,
+  CreateDateColumn,
   Entity,
   OneToOne,
   PrimaryGeneratedColumn,
+  Timestamp,
+  UpdateDateColumn,
  } from "typeorm";
-import Partner from "@modules/partner/typeorm/entities/Partner";
+import Person from "@modules/person/typeorm/entities/Person";
 
 @Entity('address')
 class Address{
@@ -13,27 +16,33 @@ class Address{
   public Id: number
 
   @Column()
-  public cep: string
+  public Cep: string
 
   @Column()
-  public logradouro: string
+  public Logradouro: string
 
   @Column()
-  public complemento: string
+  public Complemento: string
 
   @Column()
-  public bairro: string
+  public Bairro: string
 
   @Column()
-  public localidade: string
+  public Localidade: string
 
   @Column()
-  public uf: string
+  public Uf: string
 
   @Column()
-  public pais: string
+  public Pais: string
 
-  @OneToOne(()=>Partner, Partner => Partner.AddressId)
-  Partner: Partner
+  @CreateDateColumn()
+  public CreatedAT: Timestamp
+
+  @UpdateDateColumn()
+  public UpdateAT: Timestamp
+
+  @OneToOne(()=>Person, Person => Person.AddressId)
+  Person: Person
 }
 export default Address
