@@ -36,6 +36,9 @@ class Address{
   @Column()
   public Pais: string
 
+  @Column()
+  public Number: number
+
   @CreateDateColumn()
   public CreatedAT: Timestamp
 

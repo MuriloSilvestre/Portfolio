@@ -49,7 +49,7 @@ class Person{
   @Column()
   public Partner: boolean
 
-  @Column()
+  @Column({ nullable: true })
   public Value: number
 
   @CreateDateColumn()

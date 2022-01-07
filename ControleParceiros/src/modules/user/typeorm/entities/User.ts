@@ -25,7 +25,7 @@ class User{
   @Column()
   public Password: string
 
-  @Column()
+  @Column({ nullable: true })
   public Token: string
 
   @CreateDateColumn()
