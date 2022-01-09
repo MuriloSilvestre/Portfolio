@@ -22,6 +22,9 @@ import { InputcurrencyComponent } from './components/inputcurrency/inputcurrency
 import { InputnumberComponent } from './components/inputnumber/inputnumber.component';
 import { TextcurrencyComponent } from './components/textcurrency/textcurrency.component';
 import { LinkComponent } from './components/link/link.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { LinkComponent } from './components/link/link.component';
     InputcurrencyComponent,
     InputnumberComponent,
     TextcurrencyComponent,
-    LinkComponent
+    LinkComponent,
+    FooterComponent,
+    HomeComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
