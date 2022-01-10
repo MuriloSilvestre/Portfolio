@@ -1,0 +1,16 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-gap: 20px;
+  grid-template-areas: "hd hd hd hd" "sb ct ct ct";
+  .header {
+    grid-area: hd;
+  }
+  .sidebar {
+    grid-area: sb;
+  }
+  .content {
+    grid-area: ct;
+  }
+}
