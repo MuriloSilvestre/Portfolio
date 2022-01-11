@@ -1,0 +1,8 @@
+@import "./../../global/global.scss";
+
+.content {
+  height: calc(100vh - 90px);
+  width: 97.5%;
+  margin: 0.5rem 0.8rem;
+  background-color: $CTBackgroundColor;
+}

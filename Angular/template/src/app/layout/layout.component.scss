@@ -1,9 +1,12 @@
+@import "./../global/global.scss";
+
 .layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 1fr;
-  grid-gap: 20px;
-  grid-template-areas: "hd hd hd hd" "sb ct ct ct";
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas: "sb hd hd hd hd" "sb ct ct ct ct";
+  background-color: $BackgroundColor;
   .header {
     grid-area: hd;
   }
