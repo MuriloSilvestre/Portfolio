@@ -1,43 +1,64 @@
 @import "./../../global/global.scss";
 
-.content {
-  width: 150px;
-  margin: 20px 20px;
-  .input {
-    position: relative;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
 
-    &__label {
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding: calc($size-bezel * 0.75) calc($size-bezel * 0.5);
-      margin: calc($size-bezel * 0.75 + 3px) calc($size-bezel * 0.5);
-      background: pink;
-      white-space: nowrap;
-      transform: translate(0, 0);
-      transform-origin: 0 0;
-      background: $CTBackgroundColor;
-      transition: transform 120ms ease-in;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-    &__field {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border: $InputBorder;
-      padding: calc($size-bezel * 1.5) $size-bezel;
-      color: currentColor;
-      background: transparent;
-      border-radius: $size-radius;
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $GrayColor;
+  outline: 0;
+  font-size: $FontSize;
+  color: $WhiteColor;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
 
-      &:focus,
-      &:not(:placeholder-shown) {
-        & + .input__label {
-          transform: translate(0.25rem, -65%) scale(0.8);
-          color: $PrimeryColor;
-        }
-      }
-    }
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: $FontSize;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: $FontSize;
+  color: $GrayColor;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: $FontSize;
+    color: $PrimeryColor;
+    font-weight: 400;
+  }
+  padding-bottom: 6px;
+  font-weight: 400;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $PrimeryColor, $SecondaryColor);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
   }
 }

@@ -1,12 +1,14 @@
-$PrimeryColor: #15cf04;
-$SecundaryColor: #a0a0a0;
+$PrimeryColor: #c0c0c0;
+$SecondaryColor: #404040;
+$TernaryColor: #ec1919;
+$GrayColor: #919191;
+$WhiteColor: #f5f5f5;
+$BlackColor: #080808;
 $BackgroundColor: #fdfdfd;
 $CTBackgroundColor: #f5f5f5;
 $BCSecundaryColor: #e0dada;
 $BCTernaryColor: #ebebeb;
-$InputBorder: 2px solid #181818;
-$size-bezel: .5rem;
-$size-radius: 4px;
+$FontSize: 1rem;
 
 html,
 body,
@@ -95,7 +97,7 @@ video {
   box-sizing: border-box;
   font-size: 100%;
   font: inherit;
-  font-family: "Roboto", "sans-serif";
+  font-family: "poppins";
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
