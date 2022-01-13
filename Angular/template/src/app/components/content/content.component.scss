@@ -2,10 +2,35 @@
 
 .content {
   height: calc(100vh - 90px);
-  width: 97.5%;
-  margin: 0.5rem 0.8rem;
-  background-color: $CTBackgroundColor;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  background-color: transparent;
   .teste {
-    padding: 100px;
+    padding: 1rem 1rem;
+    .contentheader {
+      padding: 1rem 0rem;
+
+      .line {
+        margin: 0rem 0.3rem;
+        height: 2px;
+        width: 50%;
+        background-color: $PrimaryColor;
+      }
+    }
+    .contentbody {
+      margin-left: 10%;
+      .buttons {
+        padding: 1rem 1rem;
+        display: flex;
+      }
+    }
   }
+}
+
+.mt {
+  margin-top: 0.5rem;
+}
+
+.ml {
+  margin-left: 0.5rem;
 }

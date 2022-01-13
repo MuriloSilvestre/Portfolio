@@ -3,7 +3,20 @@
 .content {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
+  align-items: center;
   width: 100%;
   height: 80%;
-  background-color: $BCTernaryColor;
+  background-color: transparent;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  .perfil {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    h2 {
+      color: $SecondaryColor;
+      padding: 0rem 1rem;
+    }
+  }
 }

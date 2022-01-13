@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
-import { TableComponent } from './components/table/table.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { MessageComponent } from './components/message/message.component';
@@ -25,6 +24,7 @@ import { LinkComponent } from './components/link/link.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthComponent } from './pages/auth/auth.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { AuthComponent } from './pages/auth/auth.component';
     LayoutComponent,
     InputComponent,
     ListComponent,
-    TableComponent,
     MenuComponent,
     CheckboxComponent,
     MessageComponent,
@@ -50,7 +49,8 @@ import { AuthComponent } from './pages/auth/auth.component';
     LinkComponent,
     FooterComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
