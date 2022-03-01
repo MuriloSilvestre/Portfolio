@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-import Primerio from './components/basics/Primeiro';
-
-const tag = <strong>Olá React!</strong>
+import App from './App';
 
 ReactDOM.render(
-  <div>
-    <Primerio />
-  </div>,
+  <App/>,
   document.getElementById('root')
 );
