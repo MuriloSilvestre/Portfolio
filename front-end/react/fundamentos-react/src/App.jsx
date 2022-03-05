@@ -1,6 +1,7 @@
 import React from "react";
 import Primerio from './components/basics/Primeiro';
 import ComParametro from './components/basics/ComParametro';
+import Fragmento from "./components/basics/Fragmento";
 
 export default _ =>
     <div>
@@ -9,4 +10,5 @@ export default _ =>
         <ComParametro
             titulo="Segundo Componente"
             subtitulo="Super Legal!!" />
+        <Fragmento />
     </div>
