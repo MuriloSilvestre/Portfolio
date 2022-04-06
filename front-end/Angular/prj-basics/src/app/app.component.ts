@@ -3,11 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [
-    './../styles.scss',
-    './app.component.scss'
-  ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prj-basics';
 }
