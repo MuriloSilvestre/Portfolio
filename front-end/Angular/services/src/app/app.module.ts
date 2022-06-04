@@ -1,3 +1,4 @@
+import { AccountService } from "./accounts.service";
 import { LoggingService } from "./logging.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -12,6 +13,7 @@ import { NewAccountComponent } from "./new-account/new-account.component";
   imports: [BrowserModule, FormsModule],
   providers: [
     LoggingService,
+    AccountService,
     //pode ser usasado componente  ou no module
   ],
   bootstrap: [AppComponent],
